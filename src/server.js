@@ -31,6 +31,7 @@ app.use('/api/clubs', require('./routes/clubRoutes'));
 app.use('/api/events', require('./routes/eventRoutes'));
 app.use('/api/teams', require('./routes/teamRoutes'));
 app.use('/api/attendance', require('./routes/attendanceRoutes'));
+app.use('/api/announcements', require('./routes/announcementRoutes'));
 app.use('/api/admin', require('./routes/adminRoutes'));
 
 setupChatSocket(io); // frontend ek var connect hoyega te hamesha backend nal gal kar sakda hai
