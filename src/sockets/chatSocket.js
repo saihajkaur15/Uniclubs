@@ -2,11 +2,10 @@ function setupChatSocket(io) {
   io.on('connection', (socket) => {
     console.log('⚡ user connected:', socket.id);
 
-    socket.on('sendMessage', ({ senderName, message }) => {
+    socket.on('sendMessage', ({ message }) => {
       if (!message || !message.trim()) return;
 
       const chatMessage = {
-        senderName: senderName || 'Guest User',
         message: message.trim(),
         time: new Date().toLocaleTimeString()
       };
