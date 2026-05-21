@@ -14,6 +14,7 @@ const {
   createAnnouncement,
   deleteAnnouncement,
 } = require('../controllers/announcementController');
+const { createEvent } = require('../controllers/eventController');
 
 const router = express.Router();
 
@@ -23,6 +24,7 @@ router.get('/approvals', getApprovals);
 router.post('/approvals', createApproval);
 router.patch('/approvals/:id/approve', approveRequest);
 router.patch('/approvals/:id/reject', rejectRequest);
+router.post('/events', createEvent);
 router.post('/events/:eventId/venue', assignVenue);
 router.get('/logs', getLogs);
 router.get('/stats', getStats);
